@@ -1,52 +1,122 @@
-.instruction {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  text-align: justify;
-  margin: auto;
+.main {
+  margin: 3rem;
+}
+.card-parent {
+  display: grid;
+  place-content: center;
   gap: 2rem;
-  font-size: 16px;
-  max-width: 800px;
-  width: 100%;
-  padding: 3em;
-  border-radius: 1em;
-  border: 2px solid #3f7438;
+}
+.cards {
+  background-color: aqua;
+}
+.card {
   background-color: white;
-  line-height: 2em;
-  margin-bottom: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #263238;
+  gap: 2rem;
+  line-height: 2;
+  width: 700px;
+  border: 1px solid green;
+  transition: height 0.3s ease;
 }
-.logoInstruction {
-  width: 10rem;
+.card-image img {
+  height: 150px;
+  width: 100%;
+  margin-top: 1rem;
 }
-h2,
-h3,
-span {
-  color: blue;
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-span {
-  text-decoration-line: underline;
+.card-title {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
-ul li {
-  padding: 0.5em;
+.card-list-container {
+  padding: 0 2rem;
+  text-align: justify;
+}
+.card-list-container span,
+h4 {
+  color: var(--secondary-color);
+}
+.section-text {
+  line-height: 2;
+  margin-bottom: 20px;
+}
+.card-list-container p {
+  margin-bottom: 20px;
+  /* Adjust the value to control the amount of space */
 }
 .userButton {
   display: flex;
+  flex-direction: row;
   padding: 1rem;
-  gap: 3rem;
+  gap: 1rem;
+  align-items: center;
 }
 .userBtn {
-  padding: 0.75rem;
-  cursor: pointer;
-  font-size: 1rem;
+  padding: 0 0.5rem;
   color: white;
   border: 2px solid #3f7438;
-  border-radius: 1em;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  border-radius: var(--border-radius);
   justify-items: center;
-  background-color: #3f7438;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 .userBtn:hover {
   color: black;
+}
+.expanded {
+  height: auto;
+}
+.btnToggle {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: var(--primary-color);
+  border: 2px solid #3f7438;
+  border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 960px) {
+  .card {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    width: 450px;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .userButton {
+    flex-direction: column;
+  }
+  .userBtn {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 524px) {
+  .card {
+    width: 300px;
+  }
 }
