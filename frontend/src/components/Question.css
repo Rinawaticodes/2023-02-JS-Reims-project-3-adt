@@ -4,9 +4,8 @@
   gap: 2rem;
   padding: 2em;
   justify-content: center;
-  box-sizing: border-box;
-  width: 70%;
   margin: auto;
+  max-width: 1000px;
 }
 .questions {
   display: flex;
@@ -90,7 +89,6 @@
   margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
-  /* border-radius: 1em; */
 }
 .tabel-survey .survey-th {
   background-color: hsla(113, 35%, 34%, 0.792);

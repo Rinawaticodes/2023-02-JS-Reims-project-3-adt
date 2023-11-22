@@ -14,6 +14,7 @@ import DashboardAnswer from "./pages/DashboardAnswer";
 import Dashboard from "./pages/Dashboard";
 
 import "./App.css";
+// import AdminPage from "./pages/AdminPage";
 
 function App() {
   return (

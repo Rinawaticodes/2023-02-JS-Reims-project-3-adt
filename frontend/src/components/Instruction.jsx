@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import logo from "../assets/background-marne.jpeg";
-import preambule from "../assets/books.svg";
-import survey from "../assets/survey.svg";
-import activity from "../assets/activity.svg";
-
+import validation from "../assets/validations.png";
+import activity from "../assets/activity.png";
+import list from "../assets/liste.png";
 import "./Instruction.css";
 
 function Instruction() {
@@ -31,7 +29,7 @@ function Instruction() {
       <div className="card-parent">
         <div className={`card ${isExpanded ? "expanded" : ""}`}>
           <div className="card-image">
-            <img src={preambule} alt="" />
+            <img src={validation} alt="" />
           </div>
           <div className="card-header">
             <h2 className="card-title">Preambule</h2>
@@ -49,7 +47,7 @@ function Instruction() {
               className="btnToggle"
               onClick={isExpanded ? toggleCollapse : toggleExpansion}
             >
-              {isExpanded ? "Read Less" : "Read More"}
+              {isExpanded ? "FERMER" : "Lire la suite"}
             </button>
 
             {isExpanded && (
@@ -74,7 +72,7 @@ function Instruction() {
         </div>
         <div className={`card ${isExpanded ? "expanded" : ""}`}>
           <div className="card-image">
-            <img src={survey} alt="" />
+            <img src={list} alt="" />
           </div>
           <div className="card-header">
             <h2 className="card-title">Consignes d’auto-évaluation</h2>
