@@ -8,6 +8,20 @@ class UserManager extends AbstractManager {
   insert() {
     return this.database.query(`insert into ${this.table} () values ()`);
   }
+  // insert(user) {
+  //   return this.database.query(
+  //     `INSERT INTO ${this.table} (email, hashedPassword, firstname, lastname, company_name, phone_number, is_admin) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+  //     [
+  //       user.email,
+  //       user.hashedPassword,
+  //       user.firstname,
+  //       user.lastname,
+  //       user.company_name,
+  //       user.phone_number,
+  //       user.is_admin,
+  //     ]
+  //   );
+  // }
 
   findByEmailWithPassword(email) {
     return this.database.query(`SELECT * FROM ${this.table} WHERE email = ?`, [
@@ -30,9 +44,10 @@ class UserManager extends AbstractManager {
 
   update(user) {
     return this.database.query(
-      `update ${this.table} set email= ?, hashedPassword = ?, firstname = ?, lastname = ?, phone_number = ? where id = ?`,
+      `update ${this.table} set email= ?, company_name= ?, hashedPassword = ?, firstname = ?, lastname = ?, phone_number = ? where id = ?`,
       [
         user.email,
+        user.company_name,
         user.hashedPassword,
         user.firstname,
         user.lastname,

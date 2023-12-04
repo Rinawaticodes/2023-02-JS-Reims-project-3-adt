@@ -1,0 +1,163 @@
+:focus {
+  outline: none;
+}
+
+.wrappers {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  background-image: url("../../assets/bg.png");
+}
+
+.inners {
+  padding: 20px;
+  background: #fff;
+  max-width: 850px;
+  margin: auto;
+  display: flex;
+  height: 400px;
+  /* border: 1px solid green;  */
+}
+.inners .images-holder {
+  width: 50%;
+}
+.images-holder img {
+  height: 100%;
+  max-width: 100%;
+}
+.inners form {
+  width: 50%;
+  padding-top: 36px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+.inners h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.form-wrappers {
+  position: relative;
+  border: 1px solid #333;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin-bottom: 25px;
+}
+.form-wrappers .icon-btns {
+  position: absolute;
+  bottom: 9px;
+  right: 0;
+  color: var(--primary-color);
+}
+
+.form-controls {
+  border: 1px solid #333;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  margin-bottom: 25px;
+}
+.form-wrappers::-webkit-input-placeholder {
+  font-size: 13px;
+  color: #333;
+}
+.form-controls::-moz-placeholder {
+  font-size: 13px;
+  color: #333;
+}
+.form-controls:-ms-input-placeholder {
+  font-size: 13px;
+  color: #333;
+}
+.form-controls:-moz-placeholder {
+  font-size: 13px;
+  color: #333;
+}
+
+.buttonRegisters {
+  border: none;
+  width: 170px;
+  height: 51px;
+  margin: auto;
+  margin-top: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: var(--primary-color);
+  font-size: 1rem;
+  color: #fff;
+  border-radius: var(--border-radius);
+  vertical-align: middle;
+}
+
+/* @media screen and (max-width: 946px) {
+  .inners {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inners {
+    max-width: 500px;
+    display: flex;
+    height: 600px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .inners .images-holder {
+    width: 80%;
+  }
+  .inners form {
+    width: 80%;
+    padding-top: 36px;
+  }
+}
+@media screen and (max-width: 586px) {
+  .inners {
+    max-width: 400px;
+    height: 500px;
+  }
+  .buttonRegisters {
+    width: 140px;
+    height: 40px;
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 443px) {
+  .wrappers {
+    padding: 30px;
+  }
+  .inners {
+    max-width: 350px;
+  }
+} */
+@media screen and (max-width: 768px) {
+  .inners {
+    display: block;
+    padding: 2rem;
+    margin: 2rem;
+    height: 100%;
+  }
+  .inners .images-holder{
+    width: 100%;
+  }
+  .inners form {
+    width: 100%;
+    padding: 40px 0 30px;
+  }
+}
