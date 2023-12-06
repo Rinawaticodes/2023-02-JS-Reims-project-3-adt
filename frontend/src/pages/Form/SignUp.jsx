@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { FaPhone } from "react-icons/fa";
+import { FaPhone, FaBuilding } from "react-icons/fa";
 import { useAuth } from "../../contexts/AuthContext";
 import NavbarUser from "../../components/Header/NavbarUser";
 import FooterUser from "../../components/Footer/FooterUser";
@@ -39,6 +39,43 @@ function SignUp() {
           <form
             onSubmit={(event) => {
               event.preventDefault();
+              // Validation for email format
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+              const prohibitedEmail = "pierre@adt.fr";
+
+              if (
+                !emailRef.current.value ||
+                !emailRegex.test(emailRef.current.value) ||
+                emailRef.current.value.toLowerCase() ===
+                  prohibitedEmail.toLowerCase()
+              ) {
+                // eslint-disable-next-line no-alert
+                alert("Veuillez saisir une adresse e-mail valide");
+                return;
+              }
+
+              // Validation for phone number (must be a number)
+              const phoneNumberRegex = /^\d+$/;
+              if (
+                !phonenumberRef.current.value ||
+                !phoneNumberRegex.test(phonenumberRef.current.value)
+              ) {
+                // eslint-disable-next-line no-alert
+                alert("Veuillez saisir un numéro de téléphone valide.");
+                return;
+              }
+
+              // Validate other required fields (similar to previous example)
+              if (
+                !passwordRef.current.value ||
+                !lastnameRef.current.value ||
+                !firstnameRef.current.value ||
+                !companyNameRef.current.value
+              ) {
+                // eslint-disable-next-line no-alert
+                alert("Veuillez remplir tous les champs obligatoires.");
+                return;
+              }
 
               fetch(
                 `${
@@ -81,8 +118,9 @@ function SignUp() {
                   type="text"
                   id="lastname"
                   name="lastname"
-                  placeholder="Votre nom"
+                  placeholder="Votre nom*"
                   className="form-control"
+                  required
                 />
               </div>
               <div className="label-second">
@@ -94,8 +132,9 @@ function SignUp() {
                   type="text"
                   id="firstname"
                   name="firstname"
-                  placeholder="Votre prénom"
+                  placeholder="Votre prénom*"
                   className="form-control"
+                  required
                 />
               </div>
             </div>
@@ -108,22 +147,24 @@ function SignUp() {
                 type="text"
                 id="email"
                 name="email"
-                placeholder="Votre adresse mail"
+                placeholder="Votre adresse mail*"
                 className="form-control"
+                required
               />
               <MdEmail className="icon-btn" />
             </div>
             <div className="form-wrapper">
               <label htmlFor="password" className="visually-hidden">
-                Nom{" "}
+                Mot de passe{" "}
               </label>
               <input
                 ref={passwordRef}
                 type="password"
                 id="password"
                 name="password"
-                placeholder="Votre mot de passe"
+                placeholder="Votre mot de passe*"
                 className="form-control"
+                required
               />
               <RiLockPasswordFill className="icon-btn" />
             </div>
@@ -136,8 +177,9 @@ function SignUp() {
                 type="text"
                 id="phone_number"
                 name="phone_number"
-                placeholder="Votre numéro de téléphone"
+                placeholder="Votre numéro de téléphone*"
                 className="form-control"
+                required
               />
               <FaPhone className="icon-btn" />
             </div>
@@ -150,10 +192,11 @@ function SignUp() {
                 type="text"
                 id="company_name"
                 name="company-name"
-                placeholder="Entreprise"
+                placeholder="Entreprise*"
                 className="form-control"
+                required
               />
-              <FaPhone className="icon-btn" />
+              <FaBuilding className="icon-btn" />
             </div>
             <button type="submit" className="buttonRegister" onClick={Alert}>
               Créer mon compte

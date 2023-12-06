@@ -50,18 +50,17 @@ function Instruction() {
             {isExpanded && (
               <>
                 <p>
-                  Cette charte concerne les acteurs du tourisme réceptif dans la
-                  Marne, elle a pour but de valoriser l’engagement vers un
-                  tourisme plus responsable. C’est aussi une charte de qualité
-                  puisqu’elle prend en compte les aménagements mis à la
-                  disposition des touristes.
+                  La clientèle étant de plus en plus exigeante par rapport au
+                  respect de l’environnement, l’enjeu de cette charte est de
+                  faire prendre conscience aux acteurs de la Marne que le
+                  tourisme vert est un tourisme d’avenir, et qu’il faut le
+                  construire dès aujourd’hui.
                 </p>
                 <p>
-                  Cette charte concerne les acteurs du tourisme réceptif dans la
-                  Marne, elle a pour but de valoriser l’engagement vers un
-                  tourisme plus responsable. C’est aussi une charte de qualité
-                  puisqu’elle prend en compte les aménagements mis à la
-                  disposition des touristes.
+                  La plupart des aménagements qui réduisent l’impact sur
+                  l’environnement permettent également de gérer sa consommation
+                  d’énergie et, sur le long terme, de réduire son coût de
+                  fonctionnement de façon durable.
                 </p>
               </>
             )}

@@ -3,13 +3,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  /* padding: 3rem; */
 }
 .card-container {
-  gap: 2rem;
   width: 70%;
   min-height: 100vh;
-  margin: 3rem;
+  margin: 1.5rem;
 }
 .cards {
   border-radius: var(--border-radius);

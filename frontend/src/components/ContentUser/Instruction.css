@@ -1,12 +1,12 @@
 .main {
-  margin: 3rem;
+  margin: 3rem 2rem;
   min-height: 100vh;
 }
 .card-parent {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  margin: 3rem;
+  margin: 5rem 1.5rem;
 }
 .card {
   border-radius: var(--border-radius);

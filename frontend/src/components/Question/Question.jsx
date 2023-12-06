@@ -289,18 +289,6 @@ function Question() {
             <td className="survey-td">{pourcentage(essentialQuestions)}%</td>
           </tr>
         </tbody>
-        <p> : {countCriteriaMet}</p>
-        <p>Nombre de critères non atteints : {criteriumNotReached}</p>
-        <p>Nombre de critères non concernés : {countNotApplicable}</p>
-        <p>Nombre de critères inconnus : {countUnknown}</p>
-        <p>
-          Pourcentage des questions répondues (Obligatoire) :
-          {pourcentage(mandatoryQuestions)}%
-        </p>
-        <p>
-          Pourcentage des questions répondues (Essentiel) :
-          {pourcentage(essentialQuestions)}%
-        </p>
       </table>
     </section>
   );

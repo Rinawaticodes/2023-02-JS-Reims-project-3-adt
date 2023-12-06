@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import {
   // BsCart3,
   BsGrid1X2Fill,
-  BsPeopleFill,
   BsFillGearFill,
   BsArrowRightCircleFill,
   BsFillFilterSquareFill,
+  BsClipboardDataFill,
 } from "react-icons/bs";
 import logo from "../../assets/ADT-Logo-Vert.jpeg";
 import "./AdminPage.css";
@@ -19,7 +19,9 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
     >
       <div className="sidebar-title">
         <div className="sidebar-brand">
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo adt marne" />
+          </Link>
         </div>
         {openSidebarToggle && (
           <button
@@ -40,12 +42,12 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           </Link>
         </li>
         <li className="sidebar-list-item">
-          <Link to="/dashboard/form" target="_blank" rel="noopener noreferrer">
-            <BsPeopleFill className="icon" /> Formulaire
+          <Link to="/dashboard/form" rel="noopener noreferrer">
+            <BsClipboardDataFill className="icon" /> Formulaire
           </Link>
         </li>
         <li className="sidebar-list-item">
-          <Link to="/dashboard/admin" target="_blank" rel="noopener noreferrer">
+          <Link to="/dashboard/admin" rel="noopener noreferrer">
             <BsFillGearFill className="icon" /> Administrateur
           </Link>
         </li>

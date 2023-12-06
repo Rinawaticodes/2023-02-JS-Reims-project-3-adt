@@ -110,6 +110,9 @@
   position: absolute;
   z-index: 12 !important;
 }
+.close_icon {
+  color: white;
+}
 
 /* End Sidebar  */
 
@@ -137,8 +140,8 @@
 .grid-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 8px 15px;
+  justify-content: space-between;
+  padding: 15px;
   border-radius: 5px;
   height: 100px;
 }
@@ -146,7 +149,11 @@
   font-size: 1rem;
 }
 .grid-card {
-  background-color: #2962ff;
+  background-color: var(--color-text);
+  color: black;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
 }
 
 /* .grid-card:nth-child(2) {
@@ -155,22 +162,25 @@
 
 .grid-card:nth-child(3) {
   background-color: #2e7d32;
-}
-
-.grid-card:nth-child(4) {
-  background-color: #d50000;
 } */
 
 .card-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: var(--color-text);
+  color: var(--primary-color);
 }
-
 .card-inner > .card_icon {
   font-size: 25px;
-  color: var(--color-text);
+  color: var(--secondary-color);
+}
+.card_icon1 {
+  color: rgb(208, 99, 99);
+  font-size: 25px;
+}
+.card_icon2 {
+  color: rgb(14, 136, 138);
+  font-size: 25px;
 }
 
 /*Table */
@@ -199,6 +209,7 @@
   border-radius: 5px 5px 0 0;
   overflow-x: auto;
   white-space: wrap;
+  text-transform: none;
 }
 table .table-head tr {
   color: black;
@@ -209,6 +220,7 @@ table .table-head tr {
 .table .head-table,
 .table .central-answer1 {
   padding: 12px 15px;
+  border: 1px solid rgb(215, 213, 213);
   /* min-width: 120px; */
 }
 .table tbody .list-header {
@@ -262,8 +274,16 @@ table .table-head tr {
   border: 1px solid #ddd;
   padding: 8px;
 }
+
 .header-cell {
   text-align: left;
+  text-transform: none;
+}
+.link-table {
+  background-color: var(--primary-color);
+  padding: 8px;
+  border-radius: 9px;
+  color: white;
 }
 /*RESPONSIVE*/
 @media screen and (max-width: 992px) {
@@ -291,11 +311,6 @@ table .table-head tr {
 /* Small <= 768px */
 
 @media screen and (max-width: 768px) {
-  .main-cards {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-bottom: 0;
-  }
   .table th,
   .table td {
     font-size: 14px;
@@ -314,7 +329,12 @@ table .table-head tr {
     display: none;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 576px) {
+  .main-cards-admin {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
   thead,
   th {
     display: none;
@@ -337,10 +357,10 @@ table .table-head tr {
     clear: both;
     text-align: right;
   }
-  td:before {
+  /* td:before {
     content: attr(data-label) ": ";
     float: left;
     font-weight: bold;
     margin-right: 1rem;
-  }
+  } */
 }

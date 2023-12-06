@@ -7,6 +7,7 @@ import {
   BsPeopleFill,
   //   BsFillBellFill,
 } from "react-icons/bs";
+import { IoOptionsSharp } from "react-icons/io5";
 import "./AdminPage.css";
 
 function MainDashboard() {
@@ -30,7 +31,7 @@ function MainDashboard() {
   return (
     <main className="main-container">
       <div className="main-title">
-        <h3>TABLEAU DU BORD</h3>
+        <h3>TABLEAU DE BORD</h3>
       </div>
       <div className="main-cards-admin">
         <div className="grid-card">
@@ -42,14 +43,14 @@ function MainDashboard() {
         </div>
         <div className="grid-card">
           <div className="card-inner">
-            <h3>CATEGORY</h3>
-            <BsFillGrid3X3GapFill className="card_icon" />
+            <h3>CATÉGORIES</h3>
+            <BsFillGrid3X3GapFill className="card_icon1" />
           </div>
         </div>
         <div className="grid-card">
           <div className="card-inner">
-            <h3>REPONSE</h3>
-            <BsPeopleFill className="card_icon" />
+            <h3>MANDATORY LEVEL</h3>
+            <IoOptionsSharp className="card_icon2" />
           </div>
         </div>
       </div>
@@ -77,7 +78,9 @@ function MainDashboard() {
                     <td className="central-answer1">{user.company_name}</td>
                     <td className="central-answer1">{user.email}</td>
                     <td className="central-answer1">
-                      <Link to={`/result/${user.id}`}>Voir</Link>
+                      <Link to={`/result/${user.id}`} className="link-table">
+                        Voir
+                      </Link>
                     </td>
                   </tr>
                 ))}
