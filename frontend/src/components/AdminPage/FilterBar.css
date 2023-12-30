@@ -4,17 +4,15 @@
   justify-content: space-around;
   padding: 1rem;
   background-color: #aedbb8;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); /* Ajoutez ces lignes */
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .filters select,
 .filters1 {
-  /* display: flex; */
   display: grid;
   align-items: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  /* width: 80%; */
   padding: 0.5rem;
   cursor: pointer;
   text-align: center;

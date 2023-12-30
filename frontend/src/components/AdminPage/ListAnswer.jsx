@@ -24,13 +24,6 @@ function ListAnswer() {
     fetchUserResponses();
   }, [userId]);
 
-  // const essentialQuestions = questions.filter(
-  //   (question) => question.mandatory_level === "Essentiel"
-  // );
-  // const optionQuestions = questions.filter(
-  //   (question) => question.mandatory_level === "Optionnel"
-  // );
-
   return (
     <main className="main-container">
       <section className="attendance">
@@ -56,7 +49,6 @@ function ListAnswer() {
                 <tr className="list-header">
                   <th className="head-table">Question</th>
                   <th className="head-table">Réponse</th>
-                  {/* <th className="head-table">Choix Réponses</th> */}
                 </tr>
               </thead>
               <tbody>
@@ -66,57 +58,8 @@ function ListAnswer() {
                       {response.questionContent}
                     </td>
                     <td className="central-answer1">{response.response}</td>
-
-                    {/* <div className="input-answer">
-                        <input
-                          type="radio"
-                          id={`answer${response.id}-atteint`}
-                          name={`answer${response.id}`}
-                          value="Atteint"
-                        />
-                        <label htmlFor={`answer${response.id}`}>Atteint</label>
-                        <input
-                          type="radio"
-                          id={`answer${response.id}-not-atteint`}
-                          name={`answer${response.id}`}
-                          value="Non Atteint"
-                        />
-                        <label htmlFor={`answer${response.id}`}>
-                          Non Atteint
-                        </label>
-                        <input
-                          type="radio"
-                          id={`answer${response.id}-non-concerne`}
-                          name={`answer${response.id}`}
-                          value="Non Concerné"
-                        />
-                        <label htmlFor={`answer${response.id}`}>
-                          Non Concerné
-                        </label>
-                        <input
-                          type="radio"
-                          id={`answer${response.id}-ne-sais-pas`}
-                          name={`answer${response.id}`}
-                          value="Ne sais pas"
-                        />
-                        <label htmlFor={`answer${response.id}`}>
-                          Ne sais pas
-                        </label>
-                      </div> */}
                   </tr>
                 ))}
-                {/* {users.map((user) => (
-                  <tr key={user.id} className="central-answer">
-                    <td className="central-answer1">{user.id}</td>
-                    <td className="central-answer1">{user.firstname}</td>
-                    <td className="central-answer1">{user.lastname}</td>
-                    <td className="central-answer1">{user.company_name}</td>
-                    <td className="central-answer1">{user.email}</td>
-                    <td className="central-answer1">
-                      <Link to={`/result/${user.id}`}>Voir</Link>
-                    </td>
-                  </tr>
-                ))} */}
               </tbody>
             </table>
           </div>

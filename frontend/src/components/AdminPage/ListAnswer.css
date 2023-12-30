@@ -36,7 +36,6 @@
   justify-content: center;
   align-items: center;
   border-right: 1px solid;
-  /* border-bottom: 1px solid; */
 }
 table tr:nth-child(even) td {
   background-color: #d0cdcd;

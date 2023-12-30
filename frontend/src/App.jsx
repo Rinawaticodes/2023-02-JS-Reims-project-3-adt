@@ -15,18 +15,6 @@ import ScoreThree from "./components/Score/ScoreThree";
 import SurveyPage from "./components/AdminPage/SurveyPage";
 import "./App.css";
 import AdminSetting from "./components/AdminPage/AdminSetting";
-// import EligibleScore from "./components/Score/EligibleScore";
-// import UnknownScore from "./components/Score/UnknownScore";
-// import NotEligibleScore from "./components/Score/NotEligibleScore";
-// import SignUp from "./pages/Form/SignUp";
-// import Dashboard from "./pages/Administrateur/Dashboard";
-// import Register from "./pages/Form/Register";
-// import SignUp from "./pages/Form/SignUp";
-// import SignUp from "./pages/Form/SignUp";
-// import Legal from "./pages/Legal";
-// import Register from "./pages/Register";
-// import LoginForm from "./pages/LoginForm";
-// import AdminPage from "./pages/AdminPage";
 
 function App() {
   return (

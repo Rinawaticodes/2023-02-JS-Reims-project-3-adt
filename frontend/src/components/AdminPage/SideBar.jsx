@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import {
-  // BsCart3,
   BsGrid1X2Fill,
   BsFillGearFill,
   BsArrowRightCircleFill,
@@ -32,7 +31,6 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             X
           </button>
         )}
-        {/* <span>X</span> */}
       </div>
 
       <ul className="sidebar-list">

@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import {
-  //   BsFillArchiveFill,
-  BsFillGrid3X3GapFill,
-  BsPeopleFill,
-  //   BsFillBellFill,
-} from "react-icons/bs";
+import { BsFillGrid3X3GapFill, BsPeopleFill } from "react-icons/bs";
 import { IoOptionsSharp } from "react-icons/io5";
 import "./AdminPage.css";
 
